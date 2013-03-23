@@ -8,6 +8,11 @@
  */
 
 (function($) {
+	
+	if (!((typeof google !== "undefined" && google !== null ? google.maps : void 0) != null)) {
+	  return;
+	}
+	
 	var geocoder = new google.maps.Geocoder();
 
 	function MyOverlay(map) { this.setMap(map); };
